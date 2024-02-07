@@ -23,6 +23,7 @@ body {
 	word-break: keep-all;
 }
 body.fixed {
+	position: fixed;
 	overflow-y: hidden;
 }
 input[type=text] {
@@ -92,6 +93,8 @@ textarea:focus {
     height: 100vh;
 	font: 1em;
 	position: relative;
+	background-color: #fff;
+	z-index: -1;
 }
 #main header {
 	position: fixed;
@@ -124,6 +127,9 @@ textarea:focus {
 	font-size: 1.125em;
 	font-weight: 500;
 	position: relative;
+}
+#gnb ul li:last-child a {
+	padding: 0 0 0 10px;
 }
 #gnb ul li a::after {
 	/* display: none; */
@@ -264,8 +270,10 @@ textarea:focus {
 #main .keytext p.title {
 	font-size: 5.625em;
 	font-weight: 700;
+	line-height: 1;
 }
 #main .keytext p.subtitle {
+	padding-top: 30px;
 	font-size: 1.875em;
 }
 #main header h1 a {
