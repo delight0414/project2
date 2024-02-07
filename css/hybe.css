@@ -88,13 +88,10 @@ textarea:focus {
 	line-height: 70px;
 	font-weight: 600;
 }
-
 #main {
     height: 100vh;
 	font: 1em;
 	position: relative;
-	background-color: #fff;
-	z-index: -1;
 }
 #main header {
 	position: fixed;
@@ -256,14 +253,19 @@ textarea:focus {
 .dim.active {
 	display: block;
 }
-#main .keytext {
+/* #main .keytext {
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	mix-blend-mode: exclusion;
-}
+} */
 #main .keytext p {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	mix-blend-mode: exclusion;
 	text-align: center;
 	color: #fff;
 }
@@ -430,9 +432,13 @@ section .text p.title{
 	#section01 .content_dna ul {
 		flex-direction: column;
 	}
+
 	#section01 .content_dna ul li {
 		width: 100%;
 		padding: 30px 0;
+	}
+	#section01 .content_dna ul li:first-child {
+		padding: 10px 0 30px 0;
 	}
 	#section01 .content_dna ul li::after {
 		width: 80%;
@@ -442,7 +448,7 @@ section .text p.title{
 		transform: translateX(-50%);
 	}
 	#section01 .content_dna ul li .text {
-		padding-top: 25px;
+		padding-top: 15px;
 	}
 	#section01 .content_dna ul li .text p {
 		text-align: center;
