@@ -19,13 +19,15 @@ window.addEventListener("load", function(){
 		if(!e.currentTarget.classList.contains("on")){
 			e.currentTarget.classList.add("on");  
 			gsap.fromTo(mobileMenu, {display:"block", width:0}, {width:"50%", duration: 0.1});
-			body.classList.add("fixed");
+			// body.classList.add("fixed");
+			body.classList.add("stop-scrolling");
 			dim.classList.add("active");
 		}
 		else {
 			e.currentTarget.classList.remove("on");  
 			gsap.to(mobileMenu, {width:0, duration: 0.1});
-			body.classList.remove("fixed");
+			// body.classList.remove("fixed");
+			body.classList.remove("stop-scrolling");
 			dim.classList.remove("active");
 		}
 	});
