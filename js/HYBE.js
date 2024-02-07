@@ -4,6 +4,15 @@ window.addEventListener("load", function(){
 	let body=document.querySelector("body");
 	let dim=document.querySelector(".dim");
 
+	let video=this.document.getElementById("main_video");
+	video.addEventListener("loadeddata", function(){
+		main_video.play();
+	});
+	video.addEventListener("ended", function(){
+		main_video.play();
+	});
+
+
 	mobileTab.addEventListener("click", function(e){
 		e.preventDefault();
 
@@ -76,9 +85,7 @@ window.addEventListener("load", function(){
 
 	topBtn.addEventListener("click", function(e){
 		e.preventDefault();
-
-		// window.scrollTo({top: 0});
-		// gsap.to(window, {scrollTo: 0, duration: 300});
+		gsap.to(window, {scrollTo:0, duration: 0.3});
 	});
 
 	let privacy=document.querySelector("#footer .inner > ul > li:first-child");
