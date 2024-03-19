@@ -22,9 +22,6 @@ body {
     font-family: "Bai Jamjuree" , "Noto Sans KR" , sans-serif;
 	word-break: keep-all;
 }
-/* body.fixed {
-	overflow-y: hidden;
-} */
 body.stop-scrolling {
 	height: 100%;
 	overflow: hidden;
@@ -128,9 +125,9 @@ textarea:focus {
 	font-weight: 500;
 	position: relative;
 }
-#gnb ul li:last-child a {
+/* #gnb ul li:last-child a {
 	padding: 0 0 0 10px;
-}
+} */
 #gnb ul li a::after {
 	/* display: none; */
 	position: absolute;
@@ -347,7 +344,6 @@ textarea:focus {
 }
 section {
 	padding: 5em 0;
-	/* border-top: 1px solid #000; */
 	font-size: 1em;
 }
 section .inner {
@@ -451,13 +447,10 @@ section .text p.title{
 	#section01 .content_dna ul li .text p {
 		text-align: center;
 	}
-}
-@media only screen and (max-width:720px) {
 	#section01 .content_dna ul li .image {
 		padding-bottom: 0;
 	}
 }
-
 
 .swiper {
 	width: 100%;

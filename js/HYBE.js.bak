@@ -69,7 +69,6 @@ window.addEventListener("load", function(){
 			if(sec02Swiper){
 				sec02Swiper.destroy(false, false);
 				sec02Swiper=null;
-				document.querySelector(".swiper-wrapper").removeAttribute("style");
 			}
 		}
 		else{
@@ -86,7 +85,6 @@ window.addEventListener("load", function(){
 						}
 					}
 				});
-				
 			}
 		}
 	}
@@ -104,7 +102,11 @@ window.addEventListener("load", function(){
 		}
 		else if(t < sectionList[4].offsetTop){
 			n=3;
+			// if(window.innerHeight+t === document.body.scrollHeight){
+            //     n=4;
+            // }
 		}
+		// section[4] 짧으니까 n값이 안받아짐
 		else if(t < sectionList[5].offsetTop){
 			n=4;
 			if(window.innerHeight+t === document.body.scrollHeight){
@@ -185,7 +187,6 @@ window.addEventListener("load", function(){
 		}
 	});
 	AOS.init({
-		easing: "ease-in-out-sine",
-		once: true
+		easing: "ease-in-out-sine"
 	});
 });

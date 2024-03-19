@@ -6,12 +6,15 @@
 <title>HYBE</title>
 <link rel="icon" href="images/hybe_icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/hybe.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="css/hybe_con.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
 <script src="js/HYBE.js"></script>
 </head>
 <body>
@@ -45,8 +48,8 @@
             </div>
         </header>
         <div class="keytext">
-            <p class="title">We believe in music</p>
-            <p class="subtitle">음악으로 세상에 울림을 전하고 산업을 혁신하여 삶의 변화를 만들어갑니다.</p>
+            <p class="title" data-aos="fade-up" >We believe in music</p>
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="300">음악으로 세상에 울림을 전하고 산업을 혁신하여 삶의 변화를 만들어갑니다.</p>
         </div>
 		<div class="bg"><video src="images/bg_video.mp4" id="main_video" autoplay muted playsinline poster=""></video></div>
     </div>
@@ -59,28 +62,39 @@
             </div>
             <div class="content_dna">
                 <ul>
-                    <li>
+                    <li data-aos="fade-up" data-aos-delay="50">
                         <div class="image"><img src="images/passion.png" alt=""></div>
                         <div class="text">
                             <p class="sub">열정</p>
                             <p class="title">우리가 원하는 인재의 모습</p>
-                            <p class="detail">타협하지 않는 스스로의 <strong>‘높은 기준’</strong> <br>근본적인 해결책을 찾기 위한 <strong>‘끊임 없는 개선’</strong> </p>
+                            <p class="detail">
+                                <span>‘높은 기준’</span>
+                                <br><span>‘끊임 없는 개선’</span>
+                                <br><span>‘긍정적인 시각’</span>
+                            </p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-down" data-aos-delay="50">
                         <div class="image"><img src="images/autonomy.png" alt=""></div>
                         <div class="text">
                             <p class="sub">자율</p>
                             <p class="title">우리가 일하는 방식</p>
-                            <p class="detail">다양한 경험과 생각을 제약 없이 소통할 수 있는<br> <strong>‘수평적 커뮤니케이션’</strong> <br>본인이 원하는 바를 마음껏 펼칠 수 있도록<br><strong>‘충분한 권한과 책임’</strong> </p>
+                            <p class="detail">
+                                <span>‘수평적 커뮤니케이션’</span>
+                                <br><span>‘충분한 권한과 책임’</span> 
+                            </p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-delay="50">
                         <div class="image"><img src="images/trust.png" alt=""></div>
                         <div class="text">
                             <p class="sub">신뢰</p>
                             <p class="title">우리가 서로를 바라보는 태도</p>
-                            <p class="detail">우리는 함께 성공한다는 믿음 <br><strong>‘Win Together 마인드’</strong> <br>공동 목표 달성을 위해<strong> ‘조건 없이 협력’</strong> </p>
+                            <p class="detail">
+                                    <span>‘우리는 함께 성공한다는 믿음’</span> 
+                                    <br><span>‘Win Together 마인드’</span>
+                                    <br><span>‘조건 없이 협력’</span> 
+                            </p>
                         </div>
                     </li>
                 </ul>
@@ -96,16 +110,16 @@
             </div>
             <div class="sec02_swiper mySwiper">
                 <div class="swiper-wrapper">
-                        <div class="swiper-slide"><a href=""> <span>빅히트 뮤직</span><p>B</p></a></div>
-                        <div class="swiper-slide"><a href=""> <span>플레디스<br>엔터테인먼트</span> <p>P</p></a></div>
-                        <div class="swiper-slide"><a href=""> <span>빌리프랩</span> <p>B</p></a></div>
-                        <div class="swiper-slide"><a href=""> <span>하이브 레이블즈<br> 재팬</span> <p>J</p></a></div>
-                        <div class="swiper-slide"><a href=""> <span>KOZ<br>엔터테인먼트</span><p>K</p></a></div>
-                        <div class="swiper-slide"><a href=""> <span>쏘스뮤직</span><p>S</p></a></div>
-                        <div class="swiper-slide"><a href=""><span>빅 머신<br>레이블 그룹</span> <p>B</p></a></div>
-                        <div class="swiper-slide"><a href=""> <span>QC 뮤직</span><p>Q</p></a></div>
-                        <div class="swiper-slide"><a href=""> <span>어도어</span><p>A</p></a></div>
-                        <div class="swiper-slide"><a href=""> <span>네이코</span><p>N</p></a></div>
+                        <div class="swiper-slide" data-aos="flip-right"><a href=""> <span>빅히트 뮤직</span><p>B</p></a></div>
+                        <div class="swiper-slide" data-aos="flip-right" data-aos-delay="50"><a href=""> <span>플레디스<br>엔터테인먼트</span> <p>P</p></a></div>
+                        <div class="swiper-slide" data-aos="flip-right" data-aos-delay="100"><a href=""> <span>빌리프랩</span> <p>B</p></a></div>
+                        <div class="swiper-slide" data-aos="flip-right" data-aos-delay="150"><a href=""> <span>하이브 레이블즈<br> 재팬</span> <p>J</p></a></div>
+                        <div class="swiper-slide" data-aos="flip-right" data-aos-delay="200"><a href=""> <span>KOZ<br>엔터테인먼트</span><p>K</p></a></div>
+                        <div class="swiper-slide" data-aos="flip-right" data-aos-delay="250"><a href=""> <span>쏘스뮤직</span><p>S</p></a></div>
+                        <div class="swiper-slide" data-aos="flip-right" data-aos-delay="300"><a href=""><span>빅 머신<br>레이블 그룹</span> <p>B</p></a></div>
+                        <div class="swiper-slide" data-aos="flip-right" data-aos-delay="350"><a href=""> <span>QC 뮤직</span><p>Q</p></a></div>
+                        <div class="swiper-slide" data-aos="flip-right" data-aos-delay="400"><a href=""> <span>어도어</span><p>A</p></a></div>
+                        <div class="swiper-slide" data-aos="flip-right" data-aos-delay="450"><a href=""> <span>네이코</span><p>N</p></a></div>
                 </div>
             </div>
         </div>
@@ -119,7 +133,7 @@
             </div>
                 <div class="content_benefits">
                     <ul>
-                        <li>
+                        <li data-aos="fade-right">
                             <div class="image"><img src="images/benefit_1.png" alt="">
                             </div>
                             <div class="text">
@@ -127,7 +141,7 @@
                                 <strong>자율적인 업무시간 관리</strong> 
                             </div>
                         </li>
-                        <li>
+                        <li data-aos="fade-left">
                             <div class="image"><img src="images/benefit_2.png" alt="">
                             </div>
                             <div class="text">
@@ -135,28 +149,28 @@
                                 <strong>수평적 커뮤니케이션</strong>
                             </div>
                         </li>
-                        <li>
+                        <li data-aos="fade-right">
                             <div class="image"><img src="images/benefit_3.png" alt="">
                             </div>
                             <div class="text">
                                 <p>직무별</p><strong>최적화된 장비와 소프트웨어 제공</strong>
                             </div>
                         </li>
-                        <li>
+                        <li data-aos="fade-left">
                             <div class="image"><img src="images/benefit_4.png" alt=""></div>
                             <div class="text">
                                 <p>음료 제공 및 사내식당 등을 활용한</p>
                                 <strong>중석식비 보조</strong>
                             </div>
                         </li>
-                        <li>
+                        <li data-aos="fade-right">
                             <div class="image"><img src="images/benefit_5.png" alt=""></div>
                             <div class="text">
                                 <p>구성원의 신체적 심리적 건강을 책임지는</p>
                                 <strong>피트니스 센터와 심리상담 서비스</strong>
                             </div>
                         </li>
-                        <li>
+                        <li data-aos="fade-left">
                             <div class="image">
                                 <img src="images/benefit_6.png" alt="">
                             </div>
@@ -169,7 +183,6 @@
                 </div>
             </div>
     </section>
-
     <section id="section04">
         <div class="inner">
             <div class="desc">
@@ -179,7 +192,7 @@
             </div>
                 <div class="content_culture">
                     <ul>
-                        <li>
+                        <li data-aos="flip-up">
                             <div class="image"><p>T</p>
                             <img src="images/culture_bg.png" alt="">
                             </div>
@@ -188,7 +201,7 @@
                                 <p class="detail">하이브 전 구성원이 한자리에 모인 가운데 진행되는 하이브 대표 전사 행사입니다.</p>
                             </div>
                         </li>
-                        <li>
+                        <li data-aos="flip-up" data-aos-delay="100">
                             <div class="image"><p>C</p>
                                 <img src="images/culture_bg.png" alt="">
                             </div>
@@ -197,7 +210,7 @@
                                 <p class="detail">하이브의 비전, 음악 산업의 이해부터 일하는 방식과 다양한 고민에 대해 방시혁 의장과   구성원들이 직접 대화를나누는 시간입니다.</p>
                             </div>
                         </li>
-                        <li>
+                        <li data-aos="flip-up" data-aos-delay="150">
                             <div class="image"><p>M</p>
                                 <img src="images/culture_bg.png" alt="">
                             </div>
@@ -216,6 +229,7 @@
             <div class="desc">
                 <span></span>
                 <p class="title">HYBE SOLUTIONS</p>
+                <p class="subtitle">레이블의 비즈니스 솔루션을 제공하거나 음악에 기반한 공연·영상 콘텐츠·IP·학습·게임 등의 사업을 전개합니다.</p>
             </div>
         </div>
         <div class="sec05_banner_wrap"> <!--title-->
