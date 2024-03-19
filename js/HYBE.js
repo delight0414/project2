@@ -71,6 +71,7 @@ window.addEventListener("load", function(){
 				sec02Swiper=null;
 				document.querySelector(".swiper-wrapper").removeAttribute("style");
 			}
+			document.querySelector(".swiper-wrapper").removeAttribute("style");
 		}
 		else{
 			if(!sec02Swiper){
