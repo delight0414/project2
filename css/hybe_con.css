@@ -25,7 +25,6 @@ img {
 body {
   font-family: "Bai Jamjuree", "Noto Sans KR", sans-serif;
   word-break: keep-all;
-  overflow-x: hidden;
 }
 
 body.stop-scrolling {
@@ -77,6 +76,10 @@ textarea:focus {
 :-ms-input-placeholder,
 ::placeholder {
   color: #444;
+}
+
+.wrapper {
+  overflow-x: hidden;
 }
 
 .top_btn {
@@ -453,8 +456,8 @@ section .text p.title {
 }
 
 #section02 {
-  overflow-x: hidden;
   background-color: #252525;
+  overflow-x: hidden;
 }
 #section02 .desc p.subtitle {
   color: #fff;

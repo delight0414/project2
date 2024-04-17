@@ -26,7 +26,6 @@ img {
 body {
     font-family: "Bai Jamjuree" , "Noto Sans KR" , sans-serif;
 	word-break: keep-all;
-    overflow-x: hidden;
 }
 body.stop-scrolling {
 	height: 100%;
@@ -73,13 +72,14 @@ textarea {
         outline: 2px solid $sub-gray;
     }
 }
-
 ::-webkit-input-placeholder,
 :-ms-input-placeholder,
 ::placeholder {
 	color: $main-gray;
 }
-
+.wrapper {
+    overflow-x: hidden;
+}
 .top_btn {
 	display: none;
 	position: fixed;
@@ -470,7 +470,6 @@ section {
             li {
                 width: 100%;
                 padding: 30px 0;
-
                 &:first-child {
                     padding: 10px 0 30px 0;
                 }
@@ -507,9 +506,8 @@ section {
     background-color: #333;
 }
 #section02 {
-    overflow-x: hidden;
 	background-color: #252525;
-
+    overflow-x: hidden;
     .desc {
         p.subtitle {
             color: #fff;

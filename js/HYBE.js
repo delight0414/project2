@@ -17,16 +17,13 @@ window.addEventListener("load", function(){
 	let mobileGnb=document.getElementById("mobile");
 	let mobileGnbList=mobileGnb.firstElementChild.children;
 
-	let sectionList=document.querySelectorAll("section");
+	let sectionList=[];
+	sectionList[0]=document.getElementById("main");
+	let section=document.querySelectorAll("section");
 
-	// let pageList=[]; //
-	// pageList[0]=document.getElementById("main");
-
-	// for(let i=0; i<sectionList.length; i++){
-	// 	pageList.push(sectionList[i]);
-	// }
-
-	// console.log(pageList);
+	for(let i=0; i<section.length; i++){
+		sectionList.push(section[i]);
+	}
 
 	let mobileTab=document.getElementById("tab");
 	let mobileMenu=document.getElementById("mobile");
@@ -39,16 +36,14 @@ window.addEventListener("load", function(){
 		if(!e.currentTarget.classList.contains("on")){
 			e.currentTarget.classList.add("on");  
 			gsap.fromTo(mobileMenu, {display:"block", width:0}, {width:"50%", duration: 0.1});
-			// body.classList.add("fixed");
 			body.classList.add("stop-scrolling");
 			dim.classList.add("active");
 		}
 		else {
 			e.currentTarget.classList.remove("on");  
 			gsap.to(mobileMenu, {width:0, duration: 0.1});
-			// body.classList.remove("fixed");
 			body.classList.remove("stop-scrolling");
-			dim.classList.remove("active");
+			dim.clasbodyList.remove("active");
 		}
 	});
 
@@ -107,16 +102,20 @@ window.addEventListener("load", function(){
 		}
 		else if(t < sectionList[5].offsetTop){
 			n=4;
-			if(window.innerHeight+t === document.body.scrollHeight){
-                n=5;
-            }
 		}
-		else {
+		else if(t < sectionList[6].offsetTop){
 			n=5;
+
+			if(window.innerHeight+t === document.body.scrollHeight){
+				n=6;
+			}
+		}
+		else{
+			n=6;
 		}
 
 		for(let i=0; i<gnbList.length; i++){
-			if(i === n){
+			if(i === (n-1)){
 				gnbList[i].classList.add("on");
 				mobileGnbList[i].classList.add("on");
 			}
@@ -148,7 +147,7 @@ window.addEventListener("load", function(){
 		gnbList[i].addEventListener("click", function(e){
 			e.preventDefault();
 
-			n=i;
+			n=i+1;
 			topPos=sectionList[n].offsetTop;
 
 			gsap.to(window, {scrollTo: topPos, duration: 0.4});
@@ -157,7 +156,7 @@ window.addEventListener("load", function(){
 		mobileGnbList[i].addEventListener("click", function(e){
 			e.preventDefault();
 
-			n=i;
+			n=i+1;
 			topPos=sectionList[n].offsetTop;
 
 			mobileTab.classList.remove("on");
