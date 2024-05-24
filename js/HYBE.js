@@ -62,9 +62,8 @@ window.addEventListener("load", function(){
 			}
 
 			if(sec02Swiper){
-				sec02Swiper.destroy(false, false);
+				sec02Swiper.destroy(false, true);
 				sec02Swiper=null;
-				document.querySelector(".swiper-wrapper").removeAttribute("style");
 			}
 		}
 		else{
