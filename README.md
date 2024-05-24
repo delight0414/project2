@@ -22,4 +22,25 @@ HTML, SCSS, Javascript로 개발한 개인프로젝트입니다. GSAP Scrolltrig
 
 ##
 #### 💻 Code review
-🔸 해상도 720px를 기준으로 이하일 경우에 swiper
+🔸 해상도 720px 미만일 경우 Swiper가 작동되게 했다.
+```javascript
+function resizeTrigger(){
+  let winw=window.innerWidth;
+
+  if(winw >= 720){
+// 해상도가 720 이상인데 swiper가 돌고 있다면 작동 멈추기
+    if(sec02Swiper){
+      sec02Swiper.destroy(false, true);
+      // 첫번째 params는 Swiper를 삭제할지 말지 false로 설정하면 슬라이더가 유지됨
+      // 두번째 params는 슬라이더에 적용된 스타일을 삭제할지 말지 true로 설정하면 스타일 제거됨
+      sec02Swiper=null;
+    }
+  }
+  else{
+// 해상도가 720 미만 인데 swiper가 돌고 있지 않다면 작동 시작하기
+    if(!sec02Swiper){
+      sec02Swiper=new Swiper(".sec02_swiper", {
+        .
+        .
+        .
+```
