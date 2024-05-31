@@ -43,4 +43,8 @@ function resizeTrigger(){
         .
         .
         .
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 9491b0e32e0b33a5af236a68d021175d47bbe1cc
