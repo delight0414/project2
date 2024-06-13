@@ -59,6 +59,12 @@ window.addEventListener("load", function () {
 				sec02Swiper.destroy(false, true);
 				sec02Swiper = null;
 			}
+			if (body.classList.contains('stop-scrolling')) {
+				mobileTab.classList.remove("on");
+				gsap.to(mobileMenu, { width: 0, display: "none", duration: 0.1 });
+				body.classList.remove("stop-scrolling");
+				dim.classList.remove("active");
+			}
 		}
 		else {
 			if (!sec02Swiper) {
@@ -75,7 +81,6 @@ window.addEventListener("load", function () {
 						}
 					}
 				});
-
 			}
 		}
 	}
